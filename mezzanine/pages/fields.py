@@ -61,3 +61,7 @@ class MenusField(MultiChoiceField):
         else:
             menus = getattr(settings, "PAGE_MENU_TEMPLATES", [])
             return (m[:2] for m in menus)
+
+    @choices.setter
+    def choices(self, value):
+        pass
